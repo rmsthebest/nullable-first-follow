@@ -19,9 +19,9 @@ nff <path to grammar file>
 ```
 
 # Grammar
-nff only supports one format of grammar\n
-Nonterminals are one uppercase character\n
-Terminals are one lowercase character\n
+nff only supports one format of grammar  
+Nonterminals are one uppercase character  
+Terminals are one lowercase character  
 Null is 0
 ```
 A -> B a
