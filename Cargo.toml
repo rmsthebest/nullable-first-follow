@@ -1,8 +1,9 @@
 [package]
 authors = ["rmsthebest <11652273+rmsthebest@users.noreply.github.com>"]
 categories = ["command-line-utilities"]
-name = "nff"
+description = "Command line utility that calculates nullable first follow sets. Can also be used as a library"
 license = "GPL-3.0"
+name = "nff"
 repository = "https://github.com/rmsthebest/nullable-first-follow"
 keywords = ["nullable", "first", "follow", "nff"]
 version = "0.1.0"
