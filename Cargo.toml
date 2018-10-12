@@ -1,0 +1,10 @@
+[package]
+authors = ["rmsthebest <11652273+rmsthebest@users.noreply.github.com>"]
+categories = ["command-line-utilities"]
+name = "nff"
+license = "GPL-3.0"
+repository = "https://github.com/rmsthebest/nullable-first-follow"
+keywords = ["nullable-first-follow", "nff"]
+version = "0.1.0"
+
+[dependencies]
