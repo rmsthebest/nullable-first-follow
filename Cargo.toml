@@ -2,6 +2,7 @@
 authors = ["rmsthebest <11652273+rmsthebest@users.noreply.github.com>"]
 categories = ["command-line-utilities"]
 description = "Command line utility that calculates nullable first follow sets. Can also be used as a library"
+documentation = "docs.rs/nff"
 license = "GPL-3.0"
 name = "nff"
 repository = "https://github.com/rmsthebest/nullable-first-follow"

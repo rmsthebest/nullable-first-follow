@@ -8,7 +8,7 @@ A program that calculates the nullable, first, and follow sets from a specified 
 ## Github
 ```
 git clone https://github.com/rmsthebest/nullable-first-follow
-cd upside-down
+cd nullable-first-follow
 cargo run --release <path to grammar file>
 ```
 
