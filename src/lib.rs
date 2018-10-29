@@ -4,14 +4,12 @@
 // Public License version 3 as published by the Free Software Foundation. See
 // <https://www.gnu.org/licenses/> for a copy.
 
-
-
 // libraries to read files defined by program caller
 //use std::env::Args;
 use std::fs::File;
 use std::io::prelude::*;
 
-use std::collections::HashMap; // use hashmaps to associate lefthand and righthand sides
+use hashbrown::HashMap; // use hashmaps to associate lefthand and righthand sides
 
 type Rule = Vec<Token>;
 
@@ -82,7 +80,7 @@ impl NonTerminals {
             rule_map,
         }
     }
-/// Determines which nonterminals are nullable
+    /// Determines which nonterminals are nullable
     pub fn calculate_null_set(&mut self) {
         let mut changed = true;
         while changed {
@@ -103,7 +101,7 @@ impl NonTerminals {
             }
         }
     }
-/// Determines the first set of each nonterminal
+    /// Determines the first set of each nonterminal
     pub fn calculate_first_set(&mut self) {
         let mut changed = true;
         while changed {
@@ -144,7 +142,7 @@ impl NonTerminals {
             }
         }
     }
-/// Determines the follow set of each nonterminal
+    /// Determines the follow set of each nonterminal
     pub fn calculate_follow_set(&mut self) {
         let mut changed = true;
         while changed {
@@ -171,7 +169,12 @@ impl NonTerminals {
                                         // get list of potential_new_follows
                                         // make sure they are not already in the list
                                         for f in self.first_map.get(c).unwrap() {
-                                            if !self.follow_map.get(nonterminal).unwrap().contains(&f) {
+                                            if !self
+                                                .follow_map
+                                                .get(nonterminal)
+                                                .unwrap()
+                                                .contains(&f)
+                                            {
                                                 self.follow_map
                                                     .entry(*nonterminal)
                                                     .and_modify(|follow_set| follow_set.push(*f));
